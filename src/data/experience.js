@@ -1,5 +1,37 @@
 export const experience = [
-  { period: '[START YEAR] — Present', title: 'Bachelor of Technology', organization: '[YOUR UNIVERSITY]', description: '[YOUR EDUCATION] Add your specialization, areas of study, and the work you are proud of.', type: 'Education' },
-  { period: '[DATE RANGE]', title: '[INTERNSHIP OR POSITION]', organization: '[ORGANIZATION]', description: 'Describe your role, responsibilities, and one concrete result of your work.', type: 'Experience' },
-  { period: '[DATE RANGE]', title: '[LEADERSHIP OR COMMUNITY ROLE]', organization: '[COMMUNITY]', description: 'Share how you contributed, led a team, or helped others learn and build.', type: 'Community' },
+  {
+    "period": "September 2024 - Present",
+    "title": "Bachelor of Technology",
+    "organization": "ABES Engineering College, Ghaziabad",
+    "description": "B.Tech studies with a reported GPA of 7.57. Education details reflect the resume updated November 11, 2025.",
+    "type": "Education"
+  },
+  {
+    "period": "From May 2024",
+    "title": "Freelance Meta Ads",
+    "organization": "Seven Horns Media & other clients",
+    "description": "Ran Meta Ads for Seven Horns Media and other clients. Listed as ongoing in the November 2025 resume.",
+    "type": "Freelance"
+  },
+  {
+    "period": "As of November 2025",
+    "title": "Cloud Computing Training",
+    "organization": "Hands-on learning",
+    "description": "Training in cloud infrastructure, deployment, virtualization, storage, networking, and server management across AWS, Azure, and Google Cloud fundamentals.",
+    "type": "Training"
+  },
+  {
+    "period": "2024",
+    "title": "Class 12",
+    "organization": "Haryana Board",
+    "description": "Completed Class 12 with a score of 75.2%.",
+    "type": "Education"
+  },
+  {
+    "period": "2022",
+    "title": "Class 10",
+    "organization": "CBSE",
+    "description": "Completed Class 10 with a score of 89.2%.",
+    "type": "Education"
+  }
 ];

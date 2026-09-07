@@ -1,10 +1,72 @@
 export const skills = [
-  { name: 'Languages', icon: 'code', items: ['JavaScript', 'Python', 'C++'] },
-  { name: 'Frontend', icon: 'layout', items: ['React', 'HTML & CSS', 'Tailwind CSS'] },
-  { name: 'Backend', icon: 'server', items: ['Node.js', 'Express', 'REST APIs'] },
-  { name: 'Databases', icon: 'database', items: ['PostgreSQL', 'MongoDB', 'SQL'] },
-  { name: 'AI / ML', icon: 'brain', items: ['NumPy', 'Pandas', 'Scikit-learn'] },
-  { name: 'Tools & Cloud', icon: 'terminal', items: ['Git & GitHub', 'Linux', 'Docker'] },
-  { name: 'Problem Solving', icon: 'network', items: ['Data structures', 'Algorithms', 'System design'] },
-  { name: 'In the Workshop', icon: 'compass', items: ['[CURRENTLY LEARNING]', '[NEXT EXPLORATION]'] },
+  {
+    "name": "Programming",
+    "icon": "code",
+    "items": [
+      "C++",
+      "Python",
+      "Data structures & algorithms"
+    ]
+  },
+  {
+    "name": "Web Development",
+    "icon": "layout",
+    "items": [
+      "Frontend design",
+      "Responsive layouts",
+      "Project deployment"
+    ]
+  },
+  {
+    "name": "Cloud Foundations",
+    "icon": "server",
+    "items": [
+      "AWS, Azure & Google Cloud basics",
+      "Storage & networking",
+      "Virtualization - IaaS / PaaS / SaaS"
+    ]
+  },
+  {
+    "name": "Video & Motion",
+    "icon": "brain",
+    "items": [
+      "Premiere Pro",
+      "After Effects",
+      "CapCut - Color grading"
+    ]
+  },
+  {
+    "name": "Visual Design",
+    "icon": "layout",
+    "items": [
+      "Canva",
+      "Photoshop",
+      "UI/UX design - Figma"
+    ]
+  },
+  {
+    "name": "Animation",
+    "icon": "compass",
+    "items": [
+      "Blender",
+      "2D / 3D animation"
+    ]
+  },
+  {
+    "name": "Storytelling",
+    "icon": "network",
+    "items": [
+      "Script writing",
+      "Storytelling",
+      "Digital media creation"
+    ]
+  },
+  {
+    "name": "Digital Marketing",
+    "icon": "terminal",
+    "items": [
+      "Meta Ads",
+      "Freelance client work"
+    ]
+  }
 ];

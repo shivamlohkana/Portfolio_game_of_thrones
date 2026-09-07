@@ -18,14 +18,14 @@ npm run lint
 
 - `src/data/portfolio.js`: name, headline, biography, philosophy, education, interests, contact details, profile URLs, résumé URL, coding stats, hero positioning, fire zones.
 - `src/data/projects.js`: project descriptions, categories, featured status, image paths, live demos and GitHub links. Set `placeholder: false` on real projects.
-- `src/data/skills.js`: illustrative skills and categories; replace these with your own expertise. Remove the illustrative note in `src/components/sections/SkillGrid.jsx` when accurate.
+- `src/data/skills.js`: technical and creative skills from the resume.
 - `src/data/achievements.js`: milestones and credential links.
 - `src/data/experience.js`: education, internships, and community roles.
 - `index.html`: search and social title/description. Add a canonical URL and `og:url` when you choose a permanent public domain. No social image is asserted before an actual asset exists.
 - `public/favicon.svg`: lightweight original initials placeholder.
 - `src/styles/global.css`: color tokens, layout, responsive breakpoints, and atmosphere. Tailwind utilities are available through the Vite plugin.
 
-Bracketed text, illustrative projects and skills, and dash statistics are deliberate placeholders, not claimed achievements. Null profile/demo/résumé URLs render as inactive labels instead of broken links. Replace `[EMAIL]` with your valid email address. Keep custom data URLs limited to trusted HTTPS, mailto, or local asset paths.
+Content is populated from the supplied resume, last updated November 11, 2025. Work cards describe documented freelance work, training, and hackathon participation; the resume does not identify individual software projects or provide project URLs. LinkedIn uses the profile URL supplied separately by the owner. Coding profile counts and ratings are not claimed. The hero uses the supplied throne artwork, optimized to a 235 KB WebP. Portrait and work images still use styled fallbacks. Null profile/demo/résumé URLs render as inactive labels instead of broken links. The contact email is populated from the resume. Keep custom data URLs limited to trusted HTTPS, mailto, or local asset paths.
 
 ## Assets (add your files here)
 
@@ -33,17 +33,19 @@ Bracketed text, illustrative projects and skills, and dash statistics are delibe
 public/assets/
   hero/hero-throne.webp
   portraits/shivam.webp
-  projects/knowledge-vault.webp
-  projects/sentinel-ai.webp
-  projects/open-atlas.webp
+  projects/meta-ads.webp
+  projects/hackathons.webp
+  projects/cloud-training.webp
   achievements/
   textures/
-  resume.pdf                 # optional; set portfolio.resume to /assets/resume.pdf
+  resume.pdf                 # supplied resume; linked from the contact section
 ```
 
 Missing images show intentional abstract archival placeholders. Every image uses a reserved aspect ratio; project and portrait images load lazily. The hero loads eagerly. Optimize the hero to WebP/AVIF (ideally under 500 KB) and match image paths in the data. Use your own original or licensed artwork.
 
-The hero preserves its artwork using `cover`. Adjust `hero.position` and `hero.mobilePosition` after supplying the image, especially to keep the face visible. Fire zones use viewport percentages, not source-image coordinates: retune x/y/width/height after cropping. `FireOverlay` animates screened, softly masked copies of the actual fire pixels with irregular brightness and tiny displacement, so it cannot align or display meaningful flames until the artwork is supplied. Mobile disables the blur layer and displacement; set `fire.enabled` to false if the artwork contains no fire.
+The hero preserves the supplied artwork using centered `cover` positioning. Desktop copy sits to the left of the face; mobile copy moves below the face. The original PNG is unchanged. The WebP conversion reduces transfer size from 2.34 MB to about 235 KB.
+
+`FireOverlay` samples the warm flame pixels in four configured source-image regions and animates small strips of those pixels, brightness variation, local sparks, and restrained light spill. A single canvas runs at 24 fps (20 fps on mobile); blur is disabled on mobile. Source-image percentages are converted using the same centered cover geometry as the hero, so animation follows the artwork after resizing. Keep the image centered or update the cover mapping in `FireOverlay.jsx` if changing positioning. Fire and camera movement pause offscreen and in hidden tabs. Reduced motion shows the unanimated artwork.
 
 ## Contact behavior
 

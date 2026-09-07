@@ -1,5 +1,30 @@
 export const achievements = [
-  { year: '[YEAR]', type: 'Hackathon', title: '[HACKATHON ACHIEVEMENT]', description: 'Add the event, your contribution, and the outcome your team achieved.', link: null },
-  { year: '[YEAR]', type: 'Problem solving', title: '[CODING MILESTONE]', description: 'Share a competitive programming milestone or a problem-solving achievement.', link: null },
-  { year: '[YEAR]', type: 'Certification', title: '[CERTIFICATE OR AWARD]', description: 'Add the issuing organization, area of study, and a link to the credential.', link: null },
+  {
+    "year": "2025",
+    "type": "Hackathon participation",
+    "title": "Smart India Hackathon",
+    "description": "Contributed to AI and web-based problem statements at SIH 2025.",
+    "link": null
+  },
+  {
+    "year": "2025",
+    "type": "Hackathon participation",
+    "title": "GUVI-HCL Hackathon",
+    "description": "Participated in GUVI-HCL Hackathon 2025, contributing to AI and web-based problem statements.",
+    "link": null
+  },
+  {
+    "year": "HackerRank",
+    "type": "Certification",
+    "title": "Data Structures & Algorithms Basics",
+    "description": "Algorithmic problem-solving, data structures, and logical reasoning through challenges and practice exercises.",
+    "link": null
+  },
+  {
+    "year": "Simplilearn",
+    "type": "Certification",
+    "title": "Full Stack Development",
+    "description": "Practical experience in frontend design, responsive layouts, and project deployment.",
+    "link": null
+  }
 ];

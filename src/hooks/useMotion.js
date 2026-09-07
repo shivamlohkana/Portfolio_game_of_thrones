@@ -16,7 +16,7 @@ export default function useMotion(root) {
       const tick = time => { if (!document.hidden) lenis.raf(time * 1000); };
       gsap.ticker.add(tick);
       const hero = gsap.timeline();
-      hero.from('.hero-art', { opacity: 0, scale: 1.035, duration: visited ? 0.5 : 1.8, ease: 'power2.out' })
+      hero.from('.hero-art', { opacity: 0, duration: visited ? 0.5 : 1.8, ease: 'power2.out' })
         .from('.hero-copy > *', { y: 18, opacity: 0, duration: visited ? 0.35 : 0.85, stagger: 0.13, ease: 'power2.out' }, visited ? 0 : 0.65);
       gsap.to('.hero-art', { yPercent: 9, ease: 'none', scrollTrigger: { trigger: '#realm', start: 'top top', end: 'bottom top', scrub: 0.6 } });
       gsap.utils.toArray('[data-reveal]', root.current).forEach(element => {
