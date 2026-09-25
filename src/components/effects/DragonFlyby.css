@@ -1,0 +1,30 @@
+.dragon-flyby-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  overflow: hidden;
+}
+.dragon-flyby {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(210px, 32vw, 470px);
+  aspect-ratio: 1672 / 941;
+  opacity: 0;
+  visibility: hidden;
+  filter: drop-shadow(0 24px 14px #0009);
+}
+.dragon-flyby.is-flying { visibility: visible; }
+.dragon-flyby img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dragon-wing-left { clip-path: polygon(0 0, 46% 0, 46% 100%, 0 100%); transform-origin: 46% 34%; }
+.dragon-wing-right { clip-path: polygon(54% 0, 100% 0, 100% 100%, 54% 100%); transform-origin: 54% 34%; }
+.dragon-body { clip-path: inset(0 45%); }
+.is-flying .dragon-wing { animation: dragon-wingbeat 580ms ease-in-out infinite; }
+@keyframes dragon-wingbeat {
+  0%, 100% { transform: scaleX(1) scaleY(1); }
+  50% { transform: scaleX(0.7) scaleY(0.88); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dragon-flyby-layer { display: none; }
+}

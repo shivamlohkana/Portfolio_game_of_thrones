@@ -1,0 +1,47 @@
+.origins-letter-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background: transparent;
+}
+.origins-letter {
+  --letter-ink: #651c21;
+  width: min(100%, 850px);
+  padding: var(--letter-inset, 300px) 0;
+  background: url('/assets/portraits/origins-letter.png') center / 100% 100% no-repeat;
+  color: var(--letter-ink);
+  font-family: var(--serif);
+  position: relative;
+}
+.origins-letter-copy { display: flow-root; width: 64%; margin-inline: auto; overflow-wrap: anywhere; }
+.letter-revealed { animation: letter-unfurl 1.4s cubic-bezier(.22,1,.36,1) both; transform-origin: 50% 15%; }
+@keyframes letter-unfurl {
+  from { opacity: .25; transform: translateY(36px) perspective(1600px) rotateX(5deg) scale(.98); }
+  to { opacity: 1; transform: translateY(0) perspective(1600px) rotateX(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) { .letter-revealed { animation: none; } }
+.letter-chapter { display: block; font: 600 13px/1.7 var(--display); letter-spacing: .08em; text-align: center; }
+.origins-letter h2 { color: inherit; font: 600 clamp(44px, 6vw, 68px)/1.2 var(--display); text-align: center; margin: 16px 0 24px; }
+.letter-lead { font-size: clamp(26px, 3vw, 34px); line-height: 1.3; font-style: italic; font-weight: 600; text-align: center; margin-bottom: 28px; }
+.letter-biography { font-size: 23px; line-height: 1.65; font-weight: 500; }
+.letter-details { display: grid; gap: 20px; padding-block: 25px; margin-top: 24px; border-block: 1px solid #651c2140; }
+.letter-details > div { display: flex; gap: 13px; align-items: flex-start; font-size: 22px; line-height: 1.5; }
+.letter-details svg { flex-shrink: 0; margin-top: 5px; }
+.letter-details b { display: block; font-weight: 600; }
+.letter-details > div > span { min-width: 0; }
+.letter-details small { display: block; font-size: 19px; line-height: 1.5; margin-top: 7px; }
+.letter-interests { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; font-size: 20px; font-weight: 600; }
+.origins-letter blockquote { color: inherit; font: italic 600 28px/1.45 var(--serif); margin: 30px 0; text-align: center; }
+.letter-link { display: flex; width: fit-content; align-items: center; gap: 10px; margin: 0 auto; padding-bottom: 5px; border-bottom: 1px solid currentColor; font: 600 14px/1.6 var(--display); }
+.letter-link:focus-visible { outline: 2px solid var(--letter-ink); outline-offset: 6px; }
+@media (max-width: 600px) {
+  .origins-letter-section { padding: 45px 4px; }
+  .letter-chapter { font-size: 11px; letter-spacing: .04em; }
+  .origins-letter h2 { font-size: 40px; }
+  .letter-biography { font-size: 20px; line-height: 1.55; }
+  .letter-details > div { font-size: 19px; gap: 8px; }
+  .letter-details small { font-size: 17px; }
+  .letter-interests { font-size: 18px; }
+  .origins-letter blockquote { font-size: 25px; }
+  .letter-link { font-size: 12px; }
+}
