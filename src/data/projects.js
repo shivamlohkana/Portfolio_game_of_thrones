@@ -1,53 +1,68 @@
-// Documented work and training; replace with detailed project case studies when available.
 export const projects = [
   {
     "id": "01",
-    "title": "Meta Ads Campaigns",
-    "placeholder": false,
-    "category": "Digital marketing",
+    "title": "MediTrack",
+    "category": "Healthcare",
     "featured": true,
-    "description": "Freelance Meta Ads work for Seven Horns Media and other clients, beginning in May 2024. Campaign results and client case studies are not included in the resume.",
-    "stack": [
-      "Meta Ads",
-      "Freelance work"
+    "description": "A digital prescription system connecting doctors, patients, and pharmacies. The linked admin application provides a central interface for managing healthcare accounts and operations.",
+    "highlights": [
+      "Doctor account management and verification",
+      "Patient records and history-access requests",
+      "Administrative overview and audit logs"
     ],
-    "image": "/assets/projects/meta-ads.webp",
+    "stack": [
+      "React",
+      "Digital prescriptions",
+      "Admin dashboard"
+    ],
+    "image": "/assets/projects/meditrack-logo.png?v=2",
+    "imageType": "logo",
     "github": null,
-    "demo": null,
+    "demo": "https://sih-admin-gilt.vercel.app",
+    "demoLabel": "Open admin demo",
     "motif": "vault"
   },
   {
     "id": "02",
-    "title": "Cloud Infrastructure Training",
-    "placeholder": false,
-    "category": "Cloud training",
+    "title": "Chat Sync",
+    "category": "Web application",
     "featured": false,
-    "description": "Hands-on training covering cloud infrastructure, deployment, and virtualization. Exploring AWS, Azure, and Google Cloud fundamentals, including storage, networking, server management, and cloud service models.",
-    "stack": [
-      "AWS fundamentals",
-      "Azure fundamentals",
-      "Google Cloud fundamentals"
+    "description": "Turns long chat exports into concise summaries, useful keywords, and action items. The public Chat Summarizer implementation processes conversations directly in the browser using frequency-based extractive summarization.",
+    "highlights": [
+      "Paste conversations or import TXT / ZIP exports",
+      "Adjust summary length and download the result",
+      "No backend or external AI API required for processing"
     ],
-    "image": "/assets/projects/cloud-training.webp",
-    "github": null,
+    "stack": [
+      "JavaScript",
+      "HTML & CSS",
+      "JSZip"
+    ],
+    "image": "/assets/projects/chat-sync.webp",
+    "github": "https://github.com/shivamlohkana/Chat-summarizer",
     "demo": null,
-    "motif": "atlas"
+    "motif": "sentinel"
   },
   {
     "id": "03",
-    "title": "AI & Web Hackathons",
-    "placeholder": false,
-    "category": "Hackathons",
+    "title": "Monolith to Microservices",
+    "category": "Research",
     "featured": false,
-    "description": "Contributed to AI and web-based problem statements at Smart India Hackathon (SIH 2025) and GUVI-HCL Hackathon 2025. Individual project names and repositories are not provided in the resume.",
-    "stack": [
-      "AI problem statements",
-      "Web problem statements",
-      "Team participation"
+    "description": "An empirical case study examining a migration from a monolithic application to microservices, with a focus on performance and maintainability.",
+    "highlights": [
+      "Experience-report study",
+      "Before-and-after metric evaluation",
+      "Architecture and maintainability analysis"
     ],
-    "image": "/assets/projects/hackathons.webp",
+    "stack": [
+      "Software architecture",
+      "Performance evaluation",
+      "Maintainability"
+    ],
+    "image": "/assets/projects/microservices.webp",
     "github": null,
     "demo": null,
-    "motif": "sentinel"
+    "status": "Research case study",
+    "motif": "atlas"
   }
 ];

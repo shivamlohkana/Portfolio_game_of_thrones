@@ -25,7 +25,7 @@ npm run lint
 - `public/favicon.svg`: lightweight original initials placeholder.
 - `src/styles/global.css`: color tokens, layout, responsive breakpoints, and atmosphere. Tailwind utilities are available through the Vite plugin.
 
-Content is populated from the supplied resume, last updated November 11, 2025. Work cards describe documented freelance work, training, and hackathon participation; the resume does not identify individual software projects or provide project URLs. LinkedIn uses the profile URL supplied separately by the owner. Coding profile counts and ratings are not claimed. The hero uses the supplied throne artwork, optimized to a 235 KB WebP. Portrait and work images still use styled fallbacks. Null profile/demo/résumé URLs render as inactive labels instead of broken links. The contact email is populated from the resume. Keep custom data URLs limited to trusted HTTPS, mailto, or local asset paths.
+Content is populated from `Shivam_Lohkana_Resume.pdf`, supplied September 25, 2026. This replaces the previous resume: CGPA 7.55, Teen Bucks internship, revised schools, projects, certificates, and SIH 2026 qualification. The GitHub and LinkedIn URLs are extracted from that PDF. Public project evidence is recorded in `CONTENT_SOURCES.md`. Null project URLs remain absent rather than pointing at unrelated repositories. The contact form opens an email draft; it does not send through a backend.
 
 ## Assets (add your files here)
 
@@ -33,9 +33,9 @@ Content is populated from the supplied resume, last updated November 11, 2025. W
 public/assets/
   hero/hero-throne.webp
   portraits/shivam.webp
-  projects/meta-ads.webp
-  projects/hackathons.webp
-  projects/cloud-training.webp
+  projects/meditrack.webp
+  projects/chat-sync.webp
+  projects/microservices.webp
   achievements/
   textures/
   resume.pdf                 # supplied resume; linked from the contact section
@@ -60,3 +60,15 @@ The opening sequence finishes within about 2.4 seconds, and sessionStorage short
 Build and lint are the baseline checks. A Lighthouse score is a target, not a measured guarantee; measure after adding real assets, fonts, URLs, and any form backend. Responsive styles cover mobile through wide desktop, but supplied artwork needs a final visual check at 390, 430, 768, 1024, 1440, and 1920 pixels. Fonts use Google Fonts with serif/sans-serif fallbacks; self-host them if your deployment requires no external requests.
 
 Deploy `dist/` to a static host. Sites metadata is in `.openai/hosting.json`. The project remains runnable locally with the commands above.
+
+## Scroll-controlled hero video
+
+The supplied Animate_man_on_throne_1080p_20260925113146_1.mp4 clip is stored at `public/assets/hero/hero-scroll.mp4` and configured in `src/data/portfolio.js`. `ScrollVideo.jsx` maps scroll progress to the paused video currentTime: scroll down to advance, scroll up to reverse, stop to hold the frame. The hero pins for 1.5 viewport heights (at least 900 pixels) while the clip scrubs. It never calls play(), has no loop or autoplay, and is muted. The original still remains as the loading/error and reduced-motion fallback. Reduced-motion visitors do not load the video or get the pinned scroll sequence. Independent fire, camera, embers, fog, and scroll-cue animations are disabled for this video hero.
+
+## Text animation
+
+Section headings use GSAP masked upward reveals, with a short eyebrow entrance. Selected introductory text receives a gentle horizontal reveal. Effects run once on entry, retain readable semantic text, and are removed under prefers-reduced-motion. The scroll-controlled video behavior is unchanged.
+
+## Background music
+
+The owner-supplied MP3 is stored at `public/assets/audio/background-music.mp3`. BackgroundMusic attempts playback at volume 0.25 on arrival, with browser-blocked playback retried on a pointer interaction or Enter/Space. A fixed play/mute button remains available, and the mute preference persists locally. Music pauses in hidden tabs and resumes only when enabled. The track loops; actual device loudness still depends on visitor hardware and browser volume support.

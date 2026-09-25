@@ -1,3 +1,5 @@
+import BackgroundMusic from './components/effects/BackgroundMusic';
+import RavenFlight from './components/effects/RavenFlight';
 import { useRef } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -15,5 +17,5 @@ import useMotion from './hooks/useMotion';
 export default function App() {
   const root = useRef(null);
   useMotion(root);
-  return <div ref={root} className="site-root"><a className="skip-link" href="#main-content">Skip to content</a><Navbar /><main id="main-content" tabIndex={-1}><Hero /><div className="archive-divider"><span>THOUGHTFULLY BUILT</span><span className="diamond" /><span>CONTINUOUSLY REFINED</span></div><Origins /><SkillGrid /><Projects /><AchievementTimeline /><BattleRecords /><ExperienceTimeline /><Contact /></main><Footer /><Atmosphere /><Cursor /></div>;
+  return <div ref={root} className="site-root"><a className="skip-link" href="#main-content">Skip to content</a><Navbar /><main id="main-content" tabIndex={-1}><Hero /><div className="archive-divider"><span>THOUGHTFULLY BUILT</span><span className="diamond" /><span>CONTINUOUSLY REFINED</span></div><Origins /><SkillGrid /><Projects /><ExperienceTimeline /><AchievementTimeline /><BattleRecords /><Contact /></main><Footer /><Atmosphere /><RavenFlight /><BackgroundMusic /><Cursor /></div>;
 }

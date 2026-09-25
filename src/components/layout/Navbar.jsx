@@ -37,11 +37,11 @@ export default function Navbar() {
     return () => { document.body.style.overflow = oldOverflow; document.removeEventListener('keydown', keydown); media.removeEventListener('change', resize); };
   }, [open]);
   return <header className={`navbar ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
-    <a href="#realm" className="brand" aria-label={`${portfolio.name}, home`} onClick={() => setOpen(false)}><span className="sigil">{portfolio.initials}</span><span className="brand-wordmark">THE ROYAL ARCHIVE<span>EST. MMXXVI</span></span></a>
+    <a href="#realm" className="brand" aria-label={`${portfolio.name}, home`} onClick={() => setOpen(false)}><img className="brand-crest" src="/assets/branding/crest.png" alt="" width="56" height="50" /><span className="brand-wordmark">THE ROYAL ARCHIVE<span>EST. MMXXVI</span></span></a>
     <button ref={toggle} className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-navigation">{open ? <X /> : <Menu />}</button>
     <nav ref={navigation} id="main-navigation" aria-label="Main navigation" className={open ? 'open' : ''}>
       {links.map(([id, label]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={() => setOpen(false)}>{label}</a>)}
-      <a className="nav-contact" href="#ravens" onClick={() => setOpen(false)}>Ravens <ArrowUpRight size={14} /></a>
+      <a className="nav-contact" href="#ravens" data-raven-trigger onClick={() => setOpen(false)}>Ravens <ArrowUpRight size={14} /></a>
     </nav>
   </header>;
 }

@@ -1,33 +1,33 @@
-// Resume details supplied November 11, 2025; LinkedIn and hero artwork supplied separately.
-// Fire zones are percentages of the ORIGINAL image, not the viewport.
 export const portfolio = {
   "name": "Shivam Lohkana",
   "initials": "SL",
-  "headline": "B.Tech Student | Tech Enthusiast",
+  "headline": "B.Tech Student | Technical Curator",
   "tagline": "Forging ideas into systems that survive the real world.",
-  "bio": "I am a B.Tech student at ABES Engineering College, Ghaziabad, with an interest in technology, innovation, and creative problem-solving. My work brings together programming, digital media, and storytelling, from freelance Meta Ads campaigns to technical events and hackathons. I enjoy learning new technologies and developing useful, thoughtful solutions.",
+  "bio": "I am a B.Tech student at ABES Engineering College, Ghaziabad, and a Technical Curator intern at Teen Bucks. I combine programming, technical research, and creative problem-solving to build useful digital experiences. My work spans healthcare software, conversation summarization, and research into software architecture.",
   "philosophy": "Build with intention. Learn without limits. Leave things better than you found them.",
-  "role": "B.Tech Student",
-  "education": "ABES Engineering College, Ghaziabad - B.Tech - GPA 7.57",
+  "role": "B.Tech Student & Technical Curator Intern",
+  "education": "ABES Engineering College, Ghaziabad | B.Tech | CGPA 7.55",
   "interests": [
-    "Creative problem-solving",
-    "Digital media & storytelling",
-    "Cloud computing"
+    "Software engineering",
+    "Cloud computing",
+    "Technical research"
   ],
   "email": "shivamlohkana4@gmail.com",
   "github": "https://github.com/shivamlohkana",
-  "linkedin": "https://www.linkedin.com/in/shivam-lohkana-516a1b386/",
+  "linkedin": "https://linkedin.com/in/shivam-lohkana-516a1b386",
   "leetcode": null,
   "codechef": null,
-  "resume": "/assets/resume.pdf",
-  "location": "Studying in Ghaziabad",
+  "resume": "/assets/resume.pdf?v=20260925",
+  "location": "Ghaziabad, India",
   "availability": null,
   "hero": {
     "src": "/assets/hero/hero-throne.webp",
+    "video": "/assets/hero/hero-scroll.mp4?v=throne-20260925",
     "position": "center center",
     "mobilePosition": "center center"
   },
   "portrait": "/assets/portraits/shivam.webp",
+  "originsCover": "/assets/portraits/portfolio-cover.png",
   "fire": {
     "enabled": true,
     "zones": [
@@ -59,28 +59,28 @@ export const portfolio = {
   },
   "stats": [
     {
-      "value": "7.57",
-      "label": "B.Tech GPA",
-      "note": "AS REPORTED IN RESUME",
+      "value": "7.55",
+      "label": "B.Tech CGPA",
+      "note": "ABES ENGINEERING COLLEGE",
       "profile": null
     },
     {
-      "value": "02",
-      "label": "Hackathons participated",
-      "note": "SIH & GUVI-HCL - 2025",
-      "profile": null
-    },
-    {
-      "value": "02",
-      "label": "Certifications listed",
-      "note": "HACKERRANK & SIMPLILEARN",
-      "profile": null
-    },
-    {
-      "value": "2024",
-      "label": "Freelancing since",
-      "note": "META ADS - MAY 2024",
+      "value": "03",
+      "label": "Selected projects",
+      "note": "BUILDING & RESEARCH",
       "profile": "github"
+    },
+    {
+      "value": "2026",
+      "label": "SIH qualification",
+      "note": "INTERNAL ROUND QUALIFIED",
+      "profile": null
+    },
+    {
+      "value": "02",
+      "label": "Certificates",
+      "note": "FRONTEND & AWS FOUNDATIONS",
+      "profile": null
     }
   ]
 };
